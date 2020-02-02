@@ -1,0 +1,44 @@
+@import '../scss/vars';
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  margin: 0;
+  background-color: $prime-color;
+}
+
+#react-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+h1 {
+  color: $secondary-light-color;
+  font-family: $caption-font;
+  font-size: 7vw;
+  font-weight: 300;
+  animation: appear .4s linear;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
