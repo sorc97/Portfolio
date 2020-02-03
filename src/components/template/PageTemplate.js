@@ -1,17 +1,50 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AppContext } from '../context/AppContext';
 import PropTypes from 'prop-types';
 import Sidebar from './Sidebar';
-// import { sidebarItems } from '../../config.ru';
+import classNames from 'classnames';
 import './PageTemplate.scss';
 
-const PageTemplate = ({ children }) => {
-  const currentLang = 'ru';
-  
-  const sidebarItems = require(`../../config.${currentLang}`).sidebarItems;
-  console.log(sidebarItems);
+const PageTemplate = ({
+  children,
+  currentLang,
+  changeLang
+}) => {
+  const { config: { sidebarItems } } = useContext(AppContext);
+  // const sidebarItems = require(`../../config.${currentLang}`).sidebarItems;
+
+  // Change language handler
+  const handleCheck = () => {
+    const newLang = (currentLang === 'ru') ? 'en' : 'ru';
+    changeLang(newLang);
+  }
+  // Lang classes
+  const baseLangClass = 'lang-choosing__item';
+  const activeLangClass = 'lang-choosing__item_active';
+  const ruClasses = classNames(
+    baseLangClass,
+    (currentLang === 'ru') && activeLangClass
+  )
+  const engClasses = classNames(
+    baseLangClass,
+    (currentLang === 'en') && activeLangClass
+  )
 
   return (
     <>
+      <div className='lang-choosing'>
+        <span className={ruClasses}>Ru</span>
+        <label className='toggler lang-choosing__toggler'>
+          <input
+            type='checkbox'
+            onChange={handleCheck}
+            className='toggler__checkbox'
+            id='toggler__checkbox'
+          />
+          <span className='toggler__slider'></span>
+        </label>
+        <span className={engClasses}>En</span>
+      </div>
       <Sidebar sidebarItems={sidebarItems} />
       <main className='content'>
         {children}

@@ -12,6 +12,7 @@ a {
 ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 body{
@@ -24,21 +25,11 @@ body{
   min-height: 100vh;
 }
 
-h1 {
-  color: $secondary-light-color;
+.caption {
   font-family: $caption-font;
-  font-size: 7vw;
+  font-size: 3.5rem;
   font-weight: 300;
-  animation: appear .4s linear;
-}
-
-@keyframes appear {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to{
-    opacity: 1;
-    transform: translateY(0px);
-  }
+  color: $secondary-light-color;
+  text-align: center;
+  animation: $caption-animation;
 }

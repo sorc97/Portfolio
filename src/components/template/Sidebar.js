@@ -2,8 +2,9 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Sidebar.scss';
 
-const Sidebar = ({ sidebarItems = {}, match }) => {
+const Sidebar = ({ sidebarItems = {} }) => {
   const items = Object.keys(sidebarItems);
+  // console.log(items);
 
   /* return (
     <aside className='sidebar'>

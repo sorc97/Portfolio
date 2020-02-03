@@ -1,0 +1,39 @@
+@mixin alignElements($x, $y: $x) {
+  justify-content: $x;
+  align-items: $y;
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin font($font, $size) {
+  font-family: $font, 'sans-serif';
+  font-size: $size;
+}
+
+// Media queries
+@mixin desktop{
+  @media screen and (max-width: #{$desktopWidth}) {
+    @content;
+  }
+}
+
+@mixin smDesktop{
+  @media screen and (max-width: #{$smDesktopWidth}) {
+    @content;
+  }
+}
+
+@mixin tablet{
+  @media screen and (max-width: #{$tabletWidth}) {
+    @content;
+  }
+}
+
+@mixin phone{
+  @media screen and (max-width: #{$phoneWidth}) {
+    @content;
+  }
+}

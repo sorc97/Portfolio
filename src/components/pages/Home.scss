@@ -1,0 +1,28 @@
+@import '../../scss/vars';
+@import '../../scss/mixins';
+@import '../../scss/animations';
+
+.home {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @include alignElements(center);
+  
+  &__title {
+    margin-bottom: 0px;
+    color: $secondary-light-color;
+    font-family: $caption-font;
+    font-size: 7vw;
+    font-weight: 300;
+    animation: slideFromTop .7s ease-in-out;
+  }
+
+  &__subtitle {
+    font-family: $caption-font;
+    font-size: 3vw;
+    font-style: italic;
+    font-weight: 300;
+    color: $secondary-light-color;
+    animation: slideFromBottom .7s ease-in-out;
+  }
+}

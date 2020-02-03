@@ -1,11 +1,15 @@
 @import '../../scss/vars';
 
 .sidebar {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
   display: flex;
   align-items: center;
   width: 25%;
-  min-width: 280px;
-  border-right: 2px solid $secondary-light-color;
+  // min-width: 280px;
+  // border-right: 2px solid $secondary-light-color;
   background-color: $secondary-color;
 
   &__menu {
@@ -17,21 +21,38 @@
   }
 
   &__link {
+    position: relative;
     width: 100%;
+    padding: 10px 0px;
     font-size: 2.5rem;
     font-family: $caption-font;
     color: $primory-light-color;
     text-align: center;
+    transition: $main-transition;
+    background-color: transparent;
+    z-index: 1;
 
-    &:hover {
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      height: 100%;
+      width: 0px;
+      transition: $main-transition;
       background-color: $secondary-light-color;
+      z-index: -1;
+    }
+
+    &:hover:before {
+      width: 100%;
     }
 
     &.active {
       color: $secondary-light-color;
 
-      &:hover {
-        background-color: transparent;
+      &:hover:before {
+        width: 0px;
       }
     }
   }
