@@ -1,0 +1,12 @@
+@import '../../scss/vars';
+@import '../../scss/mixins';
+
+.category {
+
+  &__title {
+    // @include font($caption-font, 2rem);
+    @include font($text-font, 2.5rem);
+    color: $secondary-light-color;
+    font-weight: 300;
+  }
+}

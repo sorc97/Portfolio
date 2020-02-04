@@ -1,0 +1,10 @@
+@import '../../scss/vars';
+@import '../../scss/mixins';
+
+.projects {
+  &__list {
+    display: flex; 
+    // justify-content: space-between;
+    flex-wrap: wrap;
+  }
+} 

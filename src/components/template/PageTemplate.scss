@@ -9,6 +9,17 @@ main {
   min-height: 100%;
   height: fit-content;
   padding: 0px 20px;
+  z-index: 1;
+
+/*   &:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 50%;
+    z-index: -1;
+  } */
 }
 
 .lang-choosing {

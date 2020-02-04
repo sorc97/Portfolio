@@ -1,0 +1,30 @@
+@import '../../scss/vars';
+@import '../../scss/mixins';
+
+
+.filter-display {
+  display: flex;
+  align-items: center;
+  font-family: $text-font;
+
+  &__text {
+    color: $secondary-light-color;
+    font-size: 1.7rem;
+    margin: 0px;
+  }
+
+  &__value {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: $tag-bg;
+    color: $tag-text;
+    margin: 0px 15px;
+    font-size: 1.3rem;
+  }
+
+  &__remove {
+    font-size: 30px;
+    color: red;
+  }
+}
+
