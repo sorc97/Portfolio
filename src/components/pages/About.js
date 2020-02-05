@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
-import photo from '../../img/roJHrwa3rTg.jpg';
+import Img from '../common/Img';
 import './About.scss';
 
 const About = () => {
   const { config: { about } } = useContext(AppContext);
-  const { caption, text } = about;
+  const { caption, text, img } = about;
 
   return (
     <section className='about'>
@@ -18,9 +18,7 @@ const About = () => {
         <p className='info__text'>
           {text}
         </p>
-        <div className='info__img'>
-          <img src={photo} alt='' />
-        </div>
+        <Img imgSource={img} additionalClasses='info__img'/>
       </div>
     </section>
   )

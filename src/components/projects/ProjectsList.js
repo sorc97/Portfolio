@@ -5,7 +5,7 @@ import './ProjectsList.scss';
 const ProjectsList = ({ projects = [] }) =>
   <ul className='projects__list'>
     {projects.map((project, i) =>
-      <ProjectsItem key={i} {...project} />
+      <ProjectsItem key={i} {...project}  />
     )}
   </ul>
 

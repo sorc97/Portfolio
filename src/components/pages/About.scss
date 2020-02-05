@@ -22,14 +22,16 @@
 
   &__img {
     width: 200px;
+    height: 200px;
     flex-shrink: 0;
     margin-left: 20px;
-
+    border-radius: 50%;
+  
     img {
       width: 100%;
-      // min-width: 200px;
+      height: 100%;
       object-fit: cover;
-      border: 3px solid $primory-light-color;
+      // border: 3px solid $primory-light-color;
       border-radius: 50%;
     }
   }

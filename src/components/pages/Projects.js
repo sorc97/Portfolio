@@ -33,26 +33,28 @@ const Projects = ({ location }) => {
 
   return (
     <section className='projects'>
-      <h1 className='caption projects__caption'>
-        {caption}
-      </h1>
-      {filterParam && <FilterDisplay text={filterText} value={filterParam} />}
-      {!filteredProjects.length && <h3>No projects</h3>}
-      {
-        categories.map((category, i) => {
-          const sortedProjects = filteredProjects.filter(
-            project => project.category === category
-          );
+      <div className='container'>
+        <h1 className='caption projects__caption'>
+          {caption}
+        </h1>
+        {filterParam && <FilterDisplay text={filterText} value={filterParam} />}
+        {!filteredProjects.length && <h3>No projects</h3>}
+        {
+          categories.map((category, i) => {
+            const sortedProjects = filteredProjects.filter(
+              project => project.category === category
+            );
 
-          return (
-            <Category
-              key={i}
-              categoryTitle={category}
-              projectsList={sortedProjects}
-            />
-          )
-        })
-      }
+            return (
+              <Category
+                key={i}
+                categoryTitle={category}
+                projectsList={sortedProjects}
+              />
+            )
+          })
+        }
+      </div>
     </section>
   )
 }
