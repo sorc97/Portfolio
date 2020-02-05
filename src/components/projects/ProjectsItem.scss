@@ -52,28 +52,6 @@
       font-weight: 300;
       margin: 10px 0px;
     }
-
-    &__about {
-      display: flex;
-      // justify-content: flex-end;
-    }
-
-    &__description {
-      cursor: pointer;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      @include font($text-font, 16px);
-      background-color: $primory-light-color;
-      // background-color: $secondary-light-color;
-      color: $prime-color;
-      margin-right: 15px;
-      transition: $main-transition;
-
-      &:hover {
-        background-color: $secondary-light-color;
-      }
-    }
   }
 }
 
@@ -89,6 +67,7 @@
     background-color: $tag-bg;
     color: $tag-text;
     transition: $main-transition;
+    // text-transform: uppercase;
 
     &:hover {
       background-color: $secondary-light-color;

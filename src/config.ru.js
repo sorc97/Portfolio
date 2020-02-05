@@ -1,18 +1,26 @@
 import {
   projectsList,
-  aboutAvatar
+  aboutAvatar,
+  sidebarIcons
 } from './config.base';
 
+export const sidebar = {
+  items: {
+    'Главная': '/',
+    'Обо мне': '/about',
+    'Проекты': '/projects',
+    'Контакты': '/contacts'
+  },
+  icons: sidebarIcons
+}
+
 export const sidebarItems = {
-  'Главная': '/',
-  'Обо мне': '/about',
-  'Проекты': '/projects',
-  'Контакты': '/contacts'
+  
 }
 
 export const main = {
   caption: "Никита Назаров",
-  subcaption: "FrontEnd разработчик"
+  subcaption: "Frontend разработчик",
 }
 
 export const about = {

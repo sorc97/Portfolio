@@ -1,8 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import IconsList from '../common/IconsList';
 import './Sidebar.scss';
 
-const Sidebar = ({ sidebarItems = {} }) => {
+const Sidebar = ({ sidebarItems = {}, icons = {} }) => {
   const items = Object.keys(sidebarItems);
   // console.log(items);
 
@@ -35,17 +36,20 @@ const Sidebar = ({ sidebarItems = {} }) => {
 
   return (
     <aside className='sidebar'>
-      <ul className='sidebar__menu'>
-        {
-          items.map((item, i) =>
-            <li key={i} className='sidebar__item'>
-              <NavLink exact className='sidebar__link' to={sidebarItems[item]}>
-                {item}
-              </NavLink>
-            </li>
-          )
-        }
-      </ul>
+      <nav className='menu'>
+        <ul className='menu__list'>
+          {
+            items.map((item, i) =>
+              <li key={i} className='menu__item'>
+                <NavLink exact className='menu__link' to={sidebarItems[item]}>
+                  {item}
+                </NavLink>
+              </li>
+            )
+          }
+        </ul>
+      </nav>
+      <IconsList className='sidebar__icons' icons={icons}/>
     </aside>
   )
 

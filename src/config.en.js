@@ -1,18 +1,22 @@
 import {
   projectsList,
-  aboutAvatar
+  aboutAvatar,
+  sidebarIcons
 } from './config.base';
 
 export const main = {
   caption: "Nikita Nazarov",
-  subcaption: "FrontEnd developer"
+  subcaption: "Frontend developer"
 }
 
-export const sidebarItems = {
-  'Home': '/',
-  'About me': '/about',
-  'My projects': '/projects',
-  'Contacts': '/contacts'
+export const sidebar = {
+  items: {
+    'Home': '/',
+    'About me': '/about',
+    'My projects': '/projects',
+    'Contacts': '/contacts'
+  },
+  icons: sidebarIcons
 }
 
 export const about = {
@@ -30,5 +34,5 @@ export const projects = {
 }
 
 export const contacts = {
-  caption: "Config"
+  caption: "Contacts"
 }

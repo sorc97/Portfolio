@@ -1,0 +1,21 @@
+@import '../../scss/mixins';
+
+.icons {
+  display: flex;
+  @include alignElements(center);
+
+  &__item {
+    margin-right: 20px;
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+}
+
+.sidebar__icons {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+}

@@ -10,8 +10,8 @@ const PageTemplate = ({
   currentLang,
   changeLang
 }) => {
-  const { config: { sidebarItems } } = useContext(AppContext);
-  // const sidebarItems = require(`../../config.${currentLang}`).sidebarItems;
+  const { config: { sidebar } } = useContext(AppContext);
+  const { items, icons } = sidebar; 
 
   // Change language handler
   const handleCheck = () => {
@@ -45,7 +45,7 @@ const PageTemplate = ({
         </label>
         <span className={engClasses}>En</span>
       </div>
-      <Sidebar sidebarItems={sidebarItems} />
+      <Sidebar sidebarItems={items} icons={icons}/>
       <main className='content'>
         {children}
       </main>

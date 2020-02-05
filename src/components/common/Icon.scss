@@ -1,0 +1,11 @@
+@import '../../scss/vars';
+
+.icon {
+  font-size: 2.5rem;
+  color: $primory-light-color;
+  transition: $main-transition;
+
+  &:hover {
+    color: $secondary-light-color;
+  }
+}

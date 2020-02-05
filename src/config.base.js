@@ -1,6 +1,11 @@
 
 export const aboutAvatar = require('./img/avatar1.jpg');
 
+export const sidebarIcons = {
+  'vk': 'https://vk.com/nikita_nnd',
+  'github': 'https://github.com/sorc97'
+}   
+
 export const projectsList = [
   {
     title: "Lawyer",
