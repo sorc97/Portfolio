@@ -5,12 +5,34 @@ import {
 } from './config.base';
 
 export const sidebar = {
-  items: {
+  menu: [
+    {
+      title: 'Главная',
+      url: '/',
+      icon: 'home'
+    },
+    {
+      title: 'Обо мне',
+      url: '/about',
+      icon: 'user'
+    },
+    {
+      title: 'Проекты',
+      url: '/projects',
+      icon: 'folder-open'
+    },
+    {
+      title: 'Контакты',
+      url: '/contacts',
+      icon: 'envelope'
+    }
+  ],
+  /* items: {
     'Главная': '/',
     'Обо мне': '/about',
     'Проекты': '/projects',
     'Контакты': '/contacts'
-  },
+  }, */
   icons: sidebarIcons
 }
 
@@ -38,5 +60,21 @@ export const projects = {
 }
 
 export const contacts = {
-  caption: "Контакты"
+  caption: "Контакты",
+  contactsList: [
+    {
+      title: "Мои профили",
+      icons: [
+        {name: 'github', description: 'Github', link: 'https://github.com/sorc97'},
+        {name: 'vk', description: 'Vkontakte', link: 'https://vk.com/nikita_nnd'}
+      ]
+    },
+    {
+      title: "Контакты для связи",
+      icons: [
+        {name: 'telegram', description: 'Telegram', link: 'https://t.me/sorc97'},
+        {name: 'envelope', description: 'nnd9797@gmail.com', link: 'mailto:nnd9797@gmail.com'}
+      ]
+    },
+  ]
 }

@@ -11,7 +11,7 @@ const PageTemplate = ({
   changeLang
 }) => {
   const { config: { sidebar } } = useContext(AppContext);
-  const { items, icons } = sidebar; 
+  const { menu, icons } = sidebar; 
 
   // Change language handler
   const handleCheck = () => {
@@ -45,7 +45,7 @@ const PageTemplate = ({
         </label>
         <span className={engClasses}>En</span>
       </div>
-      <Sidebar sidebarItems={items} icons={icons}/>
+      <Sidebar menu={menu} icons={icons}/>
       <main className='content'>
         {children}
       </main>

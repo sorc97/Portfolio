@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Link = ({ href, children, className }) =>
+const BlankLink = ({ href, children, className }) =>
   <a
     href={href}
     rel="noopener noreferrer"
@@ -11,15 +11,15 @@ const Link = ({ href, children, className }) =>
     {children}
   </a>
 
-Link.propTypes = {
+BlankLink.propTypes = {
   href: PropTypes.string,
   children: PropTypes.node,
   className: PropTypes.string
 }
 
-Link.defaultProps = {
+BlankLink.defaultProps = {
   href: "",
   className: ""
 }
 
-export default Link;
+export default BlankLink;

@@ -1,4 +1,5 @@
 @import '../../scss/vars';
+@import '../../scss/mixins';
 
 main {
   position: absolute;
@@ -8,18 +9,17 @@ main {
   width: 75%;
   min-height: 100%;
   height: fit-content;
-  padding: 0px 20px;
+  // padding: 0px 20px;
   z-index: 1;
 
-/*   &:before {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 50%;
-    height: 50%;
-    z-index: -1;
-  } */
+  @include desktop {
+    width: auto;
+    left: 150px;
+  }
+
+  @include tablet {
+    left: 0px;
+  }
 }
 
 .lang-choosing {

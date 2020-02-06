@@ -8,7 +8,7 @@ const About = () => {
   const { caption, text, img } = about;
 
   return (
-    <section className='about'>
+    <section className='about container'>
       <div className='about__caption-wrapper'>
         <h1 className="caption about__caption">
           {caption}
@@ -18,7 +18,7 @@ const About = () => {
         <p className='info__text'>
           {text}
         </p>
-        <Img imgSource={img} additionalClasses='info__img'/>
+        <Img imgSource={img} additionalClasses='info__img' />
       </div>
     </section>
   )

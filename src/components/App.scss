@@ -1,9 +1,10 @@
 @import '../scss/vars';
+@import '../scss/mixins';
 
 * {
   box-sizing: border-box;
 }
-
+// Reset
 a {
   display: inline-block;
   text-decoration: none;
@@ -13,6 +14,18 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+// Common styles
+
+html {
+  @include tablet {
+    font-size: 15px;
+  }
+
+  @include phone {
+    font-size: 14px;
+  }
 }
 
 body {
@@ -38,6 +51,11 @@ body {
   max-width: 1300px;
   height: 100%;
   margin: auto;
+  padding: 0px 25px;
+
+  @include phone {
+    padding: 0px 15px;
+  }
 }
 
 .caption {

@@ -1,10 +1,15 @@
 import React from 'react';
 import classNames from 'classnames';
-import Link from './Link';
+import PropTypes from 'prop-types';
+import BlankLink from './BlankLink';
 import Icon from './Icon';
 import './IconsList.scss';
 
-const IconsList = ({ className, icons }) => {
+const IconsList = ({ 
+  icons = {}, 
+  className = '', 
+  hover = false
+}) => {
 
   const iconsNames = Object.keys(icons);
 
@@ -18,9 +23,9 @@ const IconsList = ({ className, icons }) => {
       {
         iconsNames.map((iconName, i) =>
           <li key={i} className='icons__item'>
-            <Link href={icons[iconName]} className='icons__link'>
-              <Icon name={iconName} />
-            </Link>
+            <BlankLink href={icons[iconName]} className='icons__link'>
+              <Icon name={iconName} hover={hover} />
+            </BlankLink>
           </li>
         )
       }
@@ -28,5 +33,10 @@ const IconsList = ({ className, icons }) => {
   )
 }
 
+Icon.propTypes = {
+  icons: PropTypes.object,
+  className: PropTypes.string,
+  hover: PropTypes.bool
+}
 
 export default IconsList;

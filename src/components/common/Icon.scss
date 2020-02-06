@@ -4,7 +4,9 @@
   font-size: 2.5rem;
   color: $primory-light-color;
   transition: $main-transition;
+}
 
+.icon_hovering {
   &:hover {
     color: $secondary-light-color;
   }

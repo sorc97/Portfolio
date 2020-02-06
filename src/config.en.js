@@ -10,12 +10,34 @@ export const main = {
 }
 
 export const sidebar = {
-  items: {
+  menu: [
+    {
+      title: 'Home',
+      url: '/',
+      icon: 'home'
+    },
+    {
+      title: 'About',
+      url: '/about',
+      icon: 'user'
+    },
+    {
+      title: 'Projects',
+      url: '/projects',
+      icon: 'folder-open'
+    },
+    {
+      title: 'Contacts',
+      url: '/contacts',
+      icon: 'envelope'
+    }
+  ],
+  /* items: {
     'Home': '/',
     'About me': '/about',
     'My projects': '/projects',
     'Contacts': '/contacts'
-  },
+  }, */
   icons: sidebarIcons
 }
 
@@ -34,5 +56,21 @@ export const projects = {
 }
 
 export const contacts = {
-  caption: "Contacts"
+  caption: "Contacts",
+  contactsList: [
+    {
+      title: "My profiles",
+      icons: [
+        {name: 'github', description: 'Github'},
+        {name: 'vk', description: 'Vkontakte'}
+      ]
+    },
+    {
+      title: "Contacts for communication",
+      icons: [
+        {name: 'telegram', description: 'Telegram', link: 'https://t.me/sorc97'},
+        {name: 'envelope', description: 'nnd9797@gmail.com', link: 'mailto:nnd9797@gmail.com'}
+      ]
+    },
+  ]
 }

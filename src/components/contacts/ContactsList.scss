@@ -1,0 +1,82 @@
+@import '../../scss/vars';
+@import '../../scss/mixins';
+
+.contacts-info {
+  &__item {
+    /* display: flex;
+    flex-direction: column; */
+    // min-width: 280px;
+    margin-right: 70px;
+    
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    @include desktop {
+      margin-right: 0;
+      margin-bottom: 2.5rem;
+
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+
+  &__caption {
+    @include font($caption-font, 2rem);
+    color: $secondary-light-color;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 2.5rem;
+
+    @include desktop {
+      text-align: center;
+    }
+  }
+
+  &__icons-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include phone {
+      align-items: center;
+    }
+  }
+}
+
+.icons-list {
+  &__link {
+    display: flex;
+    align-items: center;
+    @include font($text-font, 1.5rem);
+    color: $primory-light-color;
+    margin-bottom: 15px;
+    transition: $main-transition;
+
+    @include phone {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    &:hover {
+      color: $secondary-light-color;
+
+      & .icon {
+        color: $secondary-light-color;
+      }
+    }
+  }
+
+  &__icon {
+    margin-right: 20px;
+
+    @include phone {
+      margin: 0 0 5px 0;
+    }
+  }
+}

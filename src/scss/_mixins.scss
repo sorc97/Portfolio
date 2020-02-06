@@ -1,3 +1,5 @@
+@import './vars';
+
 @mixin alignElements($x, $y: $x) {
   justify-content: $x;
   align-items: $y;
