@@ -1,0 +1,83 @@
+@import '../../scss/mixins';
+
+.menu-toggler {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+  display: none;
+  width: 30px;
+  height: 25px;
+  transition: $main-transition;
+  color: $secondary-light-color;
+
+  &:focus {
+    outline: none;
+  }
+
+  &__line {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    width: 100%;
+    height: 4px;
+    background-color: $primory-light-color;
+    opacity: 1;  
+    transition: $main-transition;
+  }
+  
+  &:before, 
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: $primory-light-color;
+    // border-radius: 20%;
+    transition: $main-transition;
+    // z-index: 5;
+  }
+
+  &:before {
+    top: 0;
+
+    &__menu-opened {
+      background-color: #000;
+    }
+  }
+
+  &:after {
+    bottom: 0;
+  }
+
+  @include tablet {
+    display: block;
+  }
+
+  &_menu-opened {
+    transform: rotate(180deg);
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    .menu-toggler {
+      &__line {
+        opacity: 0;
+      }
+    }
+
+    &:before {
+      transform: rotate(45deg);
+      top: 10px;
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+      bottom: 11px;
+    }
+  }  
+}

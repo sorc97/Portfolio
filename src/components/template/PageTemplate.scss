@@ -1,14 +1,14 @@
 @import '../../scss/vars';
 @import '../../scss/mixins';
 
-main {
+.content {
   position: absolute;
   right: 0px;
   top: 0px;
   display: flex;
   width: 75%;
-  min-height: 100%;
-  height: fit-content;
+  min-height: 100vh;
+  // height: fit-content;
   // padding: 0px 20px;
   z-index: 1;
 
@@ -18,7 +18,15 @@ main {
   }
 
   @include tablet {
+    // position: static;
+    // @include size(100%);
+    // z-index: -1;
     left: 0px;
+
+    &_menu-opened {
+      transform: translateX(150px);
+      // margin-left: 150px;
+    }
   }
 }
 
@@ -46,49 +54,12 @@ main {
   }
 }
 
-.toggler {
-  position: relative;
-  display: block;
-  width: 80px;
-  height: 40px;
 
-  &__slider {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #fff;
-    transition: .5s;
-    border: 3px solid white;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-    border-radius: 35px;
-    cursor: pointer;
-    z-index: 2;
-  
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      background-color: $secondary-color;
-      // background-color: $secondary-light-color;
-      border-radius: 50%;
-      width: 35px;
-      height: 35px;
-      z-index: 3;
-    }
-  }
-
-  &__checkbox {
-    display: none;
-
-    &:checked + .toggler__slider {
-      // background-color: #000;
-    }
-
-    &:checked + .toggler__slider:before {
-      // background-color: $secondary-light-color;
-      right: 0;
-    }
-  }
+.loading {
+  display: flex;
+  @include size(100%, 100vh);
+  @include alignElements(center);
+  @include font($caption-font, 3rem);
+  text-align: center;
+  color: $secondary-light-color;
 }

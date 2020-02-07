@@ -3,6 +3,7 @@ import { AppContext } from '../context/AppContext';
 import queryString from 'query-string';
 import Category from '../projects/Category';
 import FilterDisplay from '../projects/FilterDisplay';
+import { withRouter } from 'react-router-dom';
 import './Projects.scss';
 
 const Projects = ({ location }) => {
@@ -59,4 +60,4 @@ const Projects = ({ location }) => {
   )
 }
 
-export default Projects;
+export default withRouter(Projects);

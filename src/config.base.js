@@ -6,20 +6,25 @@ export const sidebarIcons = {
   'github': 'https://github.com/sorc97'
 }   
 
-export const projectsList = [
+export const skills = [
+  'HTML5', 'CSS3', 'SCSS', 'Bootstrap', 'JavaScript(ES6)', 'JQuery', 'React', 'Redux', 'Typescript', 'Webpack', 'NodeJS', 'MongoDB'
+]
+
+/* export const projectsList = [
   {
     title: "Lawyer",
     link: "https://sorc97.github.io/Lawyer",
     img: require('./img/Lawyer.jpg'),
     tags: ['html', 'css', 'js', 'responsive'],
     github: "https://github.com/sorc97/Lawyer",
-    category: "Layouts"
+    category: "Layouts",
+    description: 'About that project'
   },
   {
     title: "Pets",
     link: "https://sorc97.github.io/Pets",
     img: require('./img/Pets.jpg'),
-    tags: ['html', 'css', 'bootstrap', 'js', 'BEM','responsive'],
+    tags: ['html', 'css', 'bootstrap', 'js', 'BEM', 'mobile first', 'responsive'],
     github: "https://github.com/sorc97/ShelterLayout",
     category: "Layouts"
   },
@@ -65,4 +70,4 @@ export const projectsList = [
     github: "https://github.com/sorc97/MusicShop",
     category: "Applications"
   },
-]
+] */

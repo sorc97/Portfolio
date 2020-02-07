@@ -1,5 +1,6 @@
 @import '../../scss/vars';
 @import '../../scss/mixins';
+@import '../../scss/animations';
 
 .sidebar {
   position: fixed;
@@ -20,6 +21,25 @@
 
   @include tablet {
     display: none;
+  }
+
+  &_active {
+    display: flex;
+    animation: slideFromLeft $main-transition;
+    box-shadow: 0px 0px 10px #000;
+    z-index: 10;
+
+    &:before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba($color: #000, $alpha: 0.5);
+      // background-color: rgba(0, 0, 0, 0.5);
+      animation: fadeIn $main-transition;
+    }
   }
 }
 

@@ -8,7 +8,8 @@ import './AboutProject.scss';
 const AboutProject = ({
   descriptionBtn,
   github,
-  title
+  title,
+  description
 }) => {
 
   const [isModalOpen, setModalOpen] = useState(false);
@@ -40,7 +41,7 @@ const AboutProject = ({
         isOpen={isModalOpen}
         onHideModal={closeModal}
       >
-        <ProjectDescription title={title} text='hello desc' />
+        <ProjectDescription title={title} text={description} />
       </Modal>
     </div>
   )

@@ -7,8 +7,12 @@
     margin-bottom: 40px;
   }
 
+  &__filter-display {
+    margin-bottom: 1.5rem;
+  }
+
   &-item {
-    width: 33%;
+    width: 33.3%;
 
     @include smDesktop {
       width: 49%;
@@ -57,7 +61,7 @@
     }
 
     &__title {
-      @include font($caption-font, 1.7rem);
+      @include font($caption-font, 2rem);
       font-weight: 300;
       margin: 10px 0px;
     }

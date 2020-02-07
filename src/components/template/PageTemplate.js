@@ -3,22 +3,26 @@ import { AppContext } from '../context/AppContext';
 import PropTypes from 'prop-types';
 import Sidebar from './Sidebar';
 import classNames from 'classnames';
+import Toggler from '../common/Toggler';
+import MenuToggler from '../common/MenuToggler';
 import './PageTemplate.scss';
 
 const PageTemplate = ({
   children,
   currentLang,
-  changeLang
+  changeLang,
+  setMenu,
+  isMenuOpen
 }) => {
   const { config: { sidebar } } = useContext(AppContext);
-  const { menu, icons } = sidebar; 
+  const { menu, icons } = sidebar;
 
   // Change language handler
   const handleCheck = () => {
     const newLang = (currentLang === 'ru') ? 'en' : 'ru';
     changeLang(newLang);
   }
-  // Lang classes
+  // Calculating lang toggler classes
   const baseLangClass = 'lang-choosing__item';
   const activeLangClass = 'lang-choosing__item_active';
   const ruClasses = classNames(
@@ -30,28 +34,35 @@ const PageTemplate = ({
     (currentLang === 'en') && activeLangClass
   )
 
+  // Toggle sidebar
+  const toggleMenu = () => {
+    setMenu(!isMenuOpen);
+  }
+
   return (
     <>
-      <div className='lang-choosing'>
-        <span className={ruClasses}>Ru</span>
-        <label className='toggler lang-choosing__toggler'>
-          <input
-            type='checkbox'
-            onChange={handleCheck}
-            className='toggler__checkbox'
-            id='toggler__checkbox'
-          />
-          <span className='toggler__slider'></span>
-        </label>
-        <span className={engClasses}>En</span>
-      </div>
-      <Sidebar menu={menu} icons={icons}/>
+      <MenuToggler
+        handleToggle={toggleMenu} 
+        activeClass={isMenuOpen && '_menu-opened'}/>
+      <Toggler
+        className='lang-choosing'
+        firstToggleValue='Ru'
+        secondToggleValue='En'
+        firstActive={ruClasses}
+        secondActive={engClasses}
+        onClick={handleCheck}
+      />
+      <Sidebar
+        menu={menu}
+        icons={icons}
+        isOpen={isMenuOpen}
+        onClick={isMenuOpen ? toggleMenu : undefined}
+      />
       <main className='content'>
         {children}
       </main>
     </>
   )
-
 }
 
 PageTemplate.propTypes = {

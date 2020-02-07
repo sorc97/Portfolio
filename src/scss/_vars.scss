@@ -21,9 +21,12 @@ $main-transition: .4s ease;
 $caption-animation: slideFromTop .7s ease-in-out; 
 
 // BreakPoints
-
 $desktopWidth: 1100px;
 $smDesktopWidth: 980px;
 $tabletWidth: 768px;
 $phoneWidth: 576px;
 // $smPhoneWidth: 320px;
+
+// Other styles
+$section-padding: 60px;
+$caption-margin: 40px;

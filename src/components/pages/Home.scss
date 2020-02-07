@@ -15,6 +15,14 @@
     font-size: 7vw;
     font-weight: 300;
     animation: slideFromTop .7s ease-in-out;
+    white-space: nowrap;
+
+    @include tablet {
+      font-size: 12vw;
+    }
+    @include phone {
+      font-size: 15vw;
+    }
   }
 
   &__subtitle {
@@ -24,5 +32,12 @@
     font-weight: 300;
     color: $secondary-light-color;
     animation: slideFromBottom .7s ease-in-out;
+
+    @include tablet {
+      font-size: 6vw;
+    }
+    @include phone {
+      font-size: 8vw;
+    }
   }
 }

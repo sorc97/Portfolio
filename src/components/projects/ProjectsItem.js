@@ -10,7 +10,8 @@ const ProjectsItem = ({
   link,
   tags,
   img,
-  github
+  github,
+  description
 }) => {
   const { config: { projects } } = useContext(AppContext);
   const { descriptionButton, openLink } = projects;
@@ -29,6 +30,7 @@ const ProjectsItem = ({
         descriptionBtn={descriptionButton} 
         github={github} 
         title={title}
+        description={description}
       />
       <div className='projects-item__tags tags'>
         {

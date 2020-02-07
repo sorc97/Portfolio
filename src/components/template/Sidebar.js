@@ -1,14 +1,26 @@
 import React from 'react';
+import classNames from 'classnames';
 import { NavLink } from 'react-router-dom';
 import IconsList from '../common/IconsList';
-import './Sidebar.scss';
 import Icon from '../common/Icon';
+import './Sidebar.scss';
 
-const Sidebar = ({ menu = [], icons = {} }) => {
+const Sidebar = ({ 
+  menu = [], 
+  icons = {},
+  isOpen,
+  onClick = f=>f
+}) => {
 
-
+  const classes = classNames(
+    'sidebar',
+    {
+      'sidebar_active': isOpen
+    }
+  )
+  
   return (
-    <aside className='sidebar'>
+    <aside className={classes} onClick={onClick}>
       <nav className='menu'>
         <ul className='menu__list'>
           {
@@ -32,8 +44,6 @@ const Sidebar = ({ menu = [], icons = {} }) => {
       />
     </aside>
   )
-
 }
-
 
 export default Sidebar;
