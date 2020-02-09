@@ -1,15 +1,21 @@
 import React from 'react';
-import './Skills.scss'
+import './Skills.scss';
 
-const Skills = ({ skillsList }) =>
-  <ul className='skills'>
-    {
-      skillsList.map((skill, i) =>
-        <div key={i} className='skills-item'>
-          {skill}
-        </div>
-      )
-    }
-  </ul>
+const Skills = ({ skillsList, caption }) =>
+  <div className='skills'>
+    <h3 className='skills__caption subcaption'>
+      {caption}
+    </h3>
+
+    <ul className='skills__list'>
+      {
+        skillsList.map((skill, i) =>
+          <li key={i} className='skills__item'>
+            {skill}
+          </li>
+        )
+      }
+    </ul>
+  </div>
 
 export default Skills;

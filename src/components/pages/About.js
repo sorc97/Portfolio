@@ -2,11 +2,13 @@ import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
 import Img from '../common/Img';
 import AboutText from '../about/AboutText';
+import Skills from '../about/Skills';
 import './About.scss';
 
 const About = () => {
   const { config: { about } } = useContext(AppContext);
-  const { caption, content, img } = about;
+  const { caption, content, img, skills } = about;
+  const { caption: skillsCaption, skillsList } = skills;
 
   return (
     <section className='about container'>
@@ -20,6 +22,7 @@ const About = () => {
               <AboutText key={i} {...item} />
             )
           }
+          <Skills caption={skillsCaption} skillsList={skillsList}/>
         </div>
         <Img imgSource={img} additionalClasses='info__img' />
       </div>

@@ -1,0 +1,18 @@
+@import '../../scss/vars';
+@import '../../scss/mixins';
+
+.skills {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  &__item {
+    padding: 10px;
+    background-color: $tag-bg;
+    border-radius: 5px;
+    @include font($text-font, 1.2rem);
+    margin: 5px 10px 5px 0px;
+  }
+}

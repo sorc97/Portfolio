@@ -4,6 +4,7 @@
 * {
   box-sizing: border-box;
 }
+
 // Reset
 a {
   display: inline-block;
@@ -16,7 +17,12 @@ ul {
   list-style: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
@@ -58,7 +64,7 @@ body {
   position: relative;
   max-width: 1300px;
   height: 100%;
-  margin: auto;
+  margin: 0 auto;
   padding: 0px 25px;
 
   @include phone {
@@ -75,10 +81,18 @@ body {
   animation: $caption-animation;
 }
 
-.projects, .contacts, .about {
+.subcaption {
+  @include font($caption-font, 2.5rem);
+  color: $secondary-light-color;
+  font-weight: 300;
+}
+
+.projects,
+.contacts,
+.about {
   padding-top: $section-padding;
   padding-bottom: 30px;
-  
+
   &__caption {
     margin-bottom: $caption-margin;
 

@@ -1,16 +1,14 @@
 import React from 'react';
-import classNames from 'classnames';
 import './AboutText.scss';
 
 const AboutText = ({ 
   caption = '', 
   text = '', 
-  className = '' 
 }) => {
 
   return (
     <article className='about-text'>
-      <h3 className='about-text__caption'>
+      <h3 className='about-text__caption subcaption'>
         {caption}
       </h3>
       {
