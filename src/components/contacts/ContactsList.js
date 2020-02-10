@@ -4,7 +4,7 @@ import Icon from '../common/Icon';
 import BlankLink from '../common/BlankLink';
 import './ContactsList.scss';
 
-const ContactsList = ({ contacts }) =>
+const ContactsList = ({ contacts = [] }) =>
   contacts.map(({ title, icons }, i) =>
     <div key={i} className='contacts-info__item'>
       <h2 className='contacts-info__caption'>
@@ -26,7 +26,7 @@ const ContactsList = ({ contacts }) =>
   )
 
 ContactsList.propTypes = {
-  contacts: PropTypes.array
+  contacts: PropTypes.arrayOf(PropTypes.object)
 }
 
 export default ContactsList;

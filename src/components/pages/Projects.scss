@@ -4,6 +4,17 @@
 .projects {
   width: 100%;
 
+  &__filter-display {
+    margin-bottom: .5rem;
+  }
+  
+  &__category{
+    margin-bottom: 2rem;
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+
   &__caption {
     margin-bottom: $caption-margin;
   }

@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
 import PropTypes from 'prop-types';
 import Sidebar from './Sidebar';
-import classNames from 'classnames';
 import Toggler from '../common/Toggler';
 import MenuToggler from '../common/MenuToggler';
 import './PageTemplate.scss';
@@ -22,17 +21,6 @@ const PageTemplate = ({
     const newLang = (currentLang === 'ru') ? 'en' : 'ru';
     changeLang(newLang);
   }
-  // Calculating lang toggler classes
-  const baseLangClass = 'lang-choosing__item';
-  const activeLangClass = 'lang-choosing__item_active';
-  const ruClasses = classNames(
-    baseLangClass,
-    (currentLang === 'ru') && activeLangClass
-  )
-  const engClasses = classNames(
-    baseLangClass,
-    (currentLang === 'en') && activeLangClass
-  )
 
   // Toggle sidebar
   const toggleMenu = () => {
@@ -42,22 +30,21 @@ const PageTemplate = ({
   return (
     <>
       <MenuToggler
-        handleToggle={toggleMenu} 
-        activeClass={isMenuOpen && '_menu-opened'}/>
+        className=''
+        handleToggle={toggleMenu}
+        additionalClass='menu-toggler_positioned'
+        isOpen={isMenuOpen} />
       <Toggler
         className='lang-choosing'
         firstToggleValue='Ru'
         secondToggleValue='En'
-        firstActive={ruClasses}
-        secondActive={engClasses}
         onClick={handleCheck}
-      />
+        checked={currentLang === 'en'} />
       <Sidebar
         menu={menu}
         icons={icons}
         isOpen={isMenuOpen}
-        onClick={isMenuOpen ? toggleMenu : undefined}
-      />
+        onClick={isMenuOpen ? toggleMenu : undefined} />
       <main className='content'>
         {children}
       </main>
@@ -66,7 +53,18 @@ const PageTemplate = ({
 }
 
 PageTemplate.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
+  currentLang: PropTypes.string,
+  isMenuOpen: PropTypes.bool,
+  changeLang: PropTypes.func,
+  setMenu: PropTypes.func
+}
+
+PageTemplate.defaultProps = {
+  currentLang: "en",
+  isMenuOpen: false,
+  changeLang: () => { },
+  setMenu: () => { }
 }
 
 export default PageTemplate;

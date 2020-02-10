@@ -26,7 +26,7 @@ const Icon = ({
 
 Icon.propTypes = {
   name: PropTypes.string,
-  additionalClasses: PropTypes.string,
+  className: PropTypes.string,
   hover: PropTypes.bool
 }
 

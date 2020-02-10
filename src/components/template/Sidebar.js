@@ -1,24 +1,26 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { NavLink } from 'react-router-dom';
 import IconsList from '../common/IconsList';
 import Icon from '../common/Icon';
 import './Sidebar.scss';
 
-const Sidebar = ({ 
-  menu = [], 
+const Sidebar = ({
+  menu = [],
   icons = {},
-  isOpen,
-  onClick = f=>f
+  isOpen = false,
+  onClick = f => f
 }) => {
 
+  // Class for mobile menu
   const classes = classNames(
     'sidebar',
     {
       'sidebar_active': isOpen
     }
   )
-  
+
   return (
     <aside className={classes} onClick={onClick}>
       <nav className='menu'>
@@ -28,9 +30,9 @@ const Sidebar = ({
               <li key={i} className='menu__item'>
                 <NavLink activeClassName='menu__link_active' exact className='menu__link' to={url}>
                   <Icon className='menu__icon' name={icon} />
-                  {/* <span className='menu__text-wrapper'> */}
+                  <span className='menu__text'>
                     {title}
-                  {/* </span> */}
+                  </span>
                 </NavLink>
               </li>
             )
@@ -44,6 +46,20 @@ const Sidebar = ({
       />
     </aside>
   )
+}
+
+Sidebar.propTypes = {
+  menu: PropTypes.arrayOf(PropTypes.object),
+  icons: PropTypes.object,
+  isOpen: PropTypes.bool,
+  onClick: PropTypes.func
+}
+
+Sidebar.defaultProps = {
+  menu: [],
+  icons: {},
+  isOpen: false,
+  onClick: () => { }
 }
 
 export default Sidebar;

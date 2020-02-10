@@ -1,16 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import './MenuToggler.scss';
 
 const MenuToggler = ({ 
-  handleToggle,
-  activeClass
+  handleToggle = f => f,
+  additionalClass,
+  isOpen = false
 }) => {
 
-  const baseClass = 'menu-toggler';
   const classes = classNames(
-    baseClass,
-    `${baseClass}${activeClass}`  // Active class based on the base class 
+    'menu-toggler',
+    isOpen && `menu-toggler_opened`,  // Active class based on the base class 
+    !isOpen && additionalClass
   )
 
   return (
@@ -18,6 +20,12 @@ const MenuToggler = ({
       <span className='menu-toggler__line'></span>
     </button>
   )
+}
+
+MenuToggler.propTypes = {
+  handleToggle: PropTypes.func,
+  additionalClass: PropTypes.string,
+  isOpen: PropTypes.bool
 }
 
 export default MenuToggler;

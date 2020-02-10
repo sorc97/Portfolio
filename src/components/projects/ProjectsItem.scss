@@ -6,16 +6,12 @@
     padding: 0px 10px;
     margin-bottom: 40px;
   }
-
-  &__filter-display {
-    margin-bottom: 1.5rem;
-  }
-
+  
   &-item {
     width: 33.3%;
 
     @include smDesktop {
-      width: 49%;
+      width: 50%;
     }
 
     @include phone {
@@ -46,9 +42,9 @@
       display: flex;
       @include alignElements(center);
       @include size(0px, 100%);
-      // background-color: rgba(239, 187, 53, 0.85);
       background-color: rgba(43, 47, 51, 0.85);
       transition: $main-transition;
+      border-radius: 4px;
       overflow: hidden;
       opacity: .4;
       z-index: 2;
@@ -64,26 +60,6 @@
       @include font($caption-font, 2rem);
       font-weight: 300;
       margin: 10px 0px;
-    }
-  }
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  @include font($text-font, 1.2rem);
-
-  &__item {
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px 10px 0px 0px;
-    background-color: $tag-bg;
-    color: $tag-text;
-    transition: $main-transition;
-    // text-transform: uppercase;
-
-    &:hover {
-      background-color: $secondary-light-color;
     }
   }
 }

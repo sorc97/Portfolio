@@ -4,8 +4,8 @@
 .projects-item {
   &__about {
     display: flex;
-    // align-items: center;
-    // justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 10px;
   }
   
   &__description-btn {
@@ -14,8 +14,6 @@
     border: none;
     border-radius: 5px;
     @include font($text-font, 16px);
-    background-color: $primory-light-color;
-    // background-color: $secondary-light-color;
     color: $prime-color;
     margin-right: 15px;
     transition: $main-transition;

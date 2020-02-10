@@ -4,21 +4,32 @@
 .filter-display {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   font-family: $text-font;
+  min-height: 50px;
+
+  &__icon {
+    font-size: 1.4rem;
+    margin-right: 10px;
+  }
 
   &__text {
-    color: $secondary-light-color;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     margin: 0px;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 5px;
   }
 
   &__value {
     border-radius: 5px;
     padding: 10px;
-    background-color: $tag-bg;
-    color: $tag-text;
-    margin: 0px 15px;
-    font-size: 1.3rem;
+    background-color: $primory-dark-color;
+    color: $primory-light-color;
+    margin: 0px .7rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
   }
 
   &__remove {
@@ -26,4 +37,3 @@
     color: red;
   }
 }
-

@@ -1,9 +1,7 @@
 @import '../../scss/mixins';
 
 .menu-toggler {
-  position: absolute;
-  left: 20px;
-  top: 20px;
+  position: relative;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -37,15 +35,13 @@
     width: 100%;
     height: 4px;
     background-color: $primory-light-color;
-    // border-radius: 20%;
     transition: $main-transition;
-    // z-index: 5;
   }
 
   &:before {
     top: 0;
 
-    &__menu-opened {
+    &__opened {
       background-color: #000;
     }
   }
@@ -58,7 +54,7 @@
     display: block;
   }
 
-  &_menu-opened {
+  &_opened {
     transform: rotate(180deg);
     position: fixed;
     top: 20px;

@@ -1,15 +1,13 @@
-import React, { useState, lazy, Suspense } from 'react';
+import React, { useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { AppContext } from './context/AppContext';
 import PageTemplate from './template/PageTemplate'
 import Error404 from './common/Error404';
 import Home from './pages/Home';
 import About from './pages/About';
-// import Projects from './pages/Projects';
+import Projects from './pages/Projects';
 import Contacts from './pages/Contacts';
 import './App.scss';
-
-const Projects = lazy(() => import('./pages/Projects'));
 
 const App = () => {
 
@@ -28,12 +26,7 @@ const App = () => {
         <Switch>
           <Route exact={true} path='/' component={Home} />
           <Route path='/about' component={About} />
-          {/* <Route path='/projects' component={Projects} /> */}
-          <Route path='/projects' render={() => 
-            <Suspense fallback={<div className='loading'>Loading...</div>}>
-              <Projects/>
-            </Suspense>
-          } />
+          <Route path='/projects' component={Projects} />
           <Route path='/contacts' component={Contacts} />
           <Route component={Error404} />
         </Switch>

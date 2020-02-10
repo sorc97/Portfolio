@@ -4,9 +4,7 @@ import './Home.scss';
 
 const Home = () => {
   const { config: { main } } = useContext(AppContext);
-  const {caption, subcaption} = main;
-  // const { mainCaption } = require(`../../config.${currentLang}`);
-
+  const { caption, subcaption } = main;
 
   return (
     <section className='home'>
@@ -18,7 +16,6 @@ const Home = () => {
       </h2>
     </section>
   )
-
 }
 
 export default Home;

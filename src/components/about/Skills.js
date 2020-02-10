@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Skills.scss';
 
-const Skills = ({ skillsList, caption }) =>
+const Skills = ({ skillsList = [], caption = "" }) =>
   <div className='skills'>
     <h3 className='skills__caption subcaption'>
       {caption}
@@ -17,5 +18,10 @@ const Skills = ({ skillsList, caption }) =>
       }
     </ul>
   </div>
+
+Skills.propTypes = {
+  skillsList: PropTypes.arrayOf(PropTypes.string),
+  caption: PropTypes.string
+}
 
 export default Skills;

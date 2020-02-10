@@ -6,6 +6,7 @@
   display: block;
   width: 80px;
   height: 40px;
+  margin: 0px 10px;
 
   &__slider {
     position: absolute;
@@ -26,7 +27,6 @@
       position: absolute;
       top: 0;
       background-color: $secondary-color;
-      // background-color: $secondary-light-color;
       border-radius: 50%;
       width: 35px;
       height: 35px;
@@ -37,12 +37,7 @@
   &__checkbox {
     display: none;
 
-    &:checked + .toggler__slider {
-      // background-color: #000;
-    }
-
     &:checked + .toggler__slider:before {
-      // background-color: $secondary-light-color;
       right: 0;
     }
   }

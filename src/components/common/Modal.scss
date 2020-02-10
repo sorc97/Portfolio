@@ -1,7 +1,8 @@
 @import '../../scss/vars';
+@import '../../scss/mixins';
 @import '../../scss/animations';
 
-.modal-overlay{
+.modal {
   position: fixed;
   left: 0px;
   top: 0px;
@@ -13,67 +14,60 @@
   flex-direction: column;
   align-items: center;
   animation: fadeIn .3s ease;
-}
 
-.modal-content{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 65%;
-  // height: 80%;
-  min-height: 150px;
-  max-height: 90%;
-  max-width: 700px;
-  min-width: 500px;
-  margin: auto;
-  border-radius: 10px;
-  background-color: $secondary-color;
-  // padding: 30px;
-  padding: 25px 0px;
-  z-index: 3;
-  // animation: slideFromTop $main-transition;
-  animation: .3s ease;
-  animation-name: fadeIn, zoomIn;
-}
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 65%;
+    min-height: 150px;
+    max-height: 90%;
+    max-width: 700px;
+    min-width: 500px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: $secondary-color;
+    padding: 25px 0px;
+    z-index: 3;
+    animation: .3s ease;
+    animation-name: fadeIn, zoomIn;
 
-.modal-content-close{
-  position: absolute;
-  right: -20px;
-  top: -20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: $primory-light-color;
-  border: 2px solid $primory-light-color;
-  background-color: $secondary-light-color;
-  border-radius: 50%;
-  font-size: 30px;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  z-index: 4;
-  transition: all 0.3s ease;
-}
-
-.modal-content-close:hover, .modal-content-close:focus{
-  background-color: #000;
-  color: #fff;
-}
-
-.modal-content-close:focus {
-  outline: none;
-}
-
-@media screen and (max-width: 576px) {
-  .modal-content{
-    width: 90%;
-    // height: 90%;
-    min-width: auto;
+    @include phone {
+      width: 90%;
+      min-width: auto;
+    }
   }
 
-  .modal-content-close{
-    top: -15px;
-    right: -15px;
+  &__btn_close {
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    @include size(40px);
+    line-height: 5px;
+    color: $primory-light-color;
+    border: 2px solid $primory-light-color;
+    background-color: $secondary-light-color;
+    border-radius: 50%;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 4;
+    transition: all 0.3s ease;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover,
+    :focus {
+      background-color: #000;
+      color: #fff;
+    }
+
+    @include phone {
+      top: -10px;
+      right: -10px;
+    }
   }
 }

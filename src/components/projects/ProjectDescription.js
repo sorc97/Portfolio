@@ -1,7 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './ProjectDescription.scss';
 
-const ProjectDescription = ({ title, text }) =>
+const ProjectDescription = ({ 
+  title = "", text = "" 
+}) =>
   <div className='project-description'>
     <h3 className='project-description__title'>
       {title}
@@ -10,5 +13,10 @@ const ProjectDescription = ({ title, text }) =>
       {text}
     </p>
   </div>
+
+ProjectDescription.propTypes = {
+  title: PropTypes.string, 
+  text: PropTypes.string
+}
 
 export default ProjectDescription;

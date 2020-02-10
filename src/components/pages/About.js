@@ -22,7 +22,7 @@ const About = () => {
               <AboutText key={i} {...item} />
             )
           }
-          <Skills caption={skillsCaption} skillsList={skillsList}/>
+          <Skills caption={skillsCaption} skillsList={skillsList} />
         </div>
         <Img imgSource={img} additionalClasses='info__img' />
       </div>

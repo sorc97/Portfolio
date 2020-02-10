@@ -1,6 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ProjectsItem from './ProjectsItem';
-import './ProjectsList.scss';
 
 const ProjectsList = ({ projects = [] }) =>
   <ul className='projects__list'>
@@ -8,5 +8,9 @@ const ProjectsList = ({ projects = [] }) =>
       <ProjectsItem key={i} {...project}  />
     )}
   </ul>
+
+ProjectsList.propTypes = {
+  projects: PropTypes.arrayOf(PropTypes.object)
+}
 
 export default ProjectsList;

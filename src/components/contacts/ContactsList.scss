@@ -3,9 +3,6 @@
 
 .contacts-info {
   &__item {
-    /* display: flex;
-    flex-direction: column; */
-    // min-width: 280px;
     margin-right: 70px;
     
     &:last-of-type {
@@ -26,7 +23,6 @@
     @include font($caption-font, 2rem);
     color: $secondary-light-color;
     font-weight: 500;
-    margin: 0;
     margin-bottom: 2.5rem;
 
     @include desktop {

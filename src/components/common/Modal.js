@@ -12,7 +12,7 @@ const Modal = ({
   const handleOverlayClick = e => {
     let target = e.target;
 
-    if (!target.classList.contains("modal-overlay")) return;
+    if (!target.classList.contains("modal")) return;
 
     onHideModal();
   }
@@ -21,14 +21,14 @@ const Modal = ({
     isOpen &&
     <Portal>
       <div
-        className="modal-overlay"
+        className="modal"
         onClick={handleOverlayClick}
       >
-        <div className="modal-content">
+        <div className="modal__content">
           <button
             type='button'
             onClick={onHideModal}
-            className="modal-content-close"
+            className="modal__btn_close"
           >
             &times;
         </button>
@@ -40,6 +40,7 @@ const Modal = ({
 }
 
 Modal.propTypes = {
+  isOpen: PropTypes.bool,
   children: PropTypes.node,
   onHideModal: PropTypes.func
 }

@@ -50,15 +50,15 @@ export const about = {
     {
       caption: "Education",
       text: [
-        "RTU MIREA",
-        "Speciality: Information systems and technologies",
+        "RTU MIREA (2019)",
+        "Speciality: Information Systems And Technologies",
         "Degree: Bachelor",
       ],
     },
     {
       caption: "Briefly about me",
       text: [
-        "I got interested with web development in about one and half year ago, before that I programming in languages like C++ and Java. During that one and a half year I graduated from university, and got small experience in independent project as HTML coder, also I improved my skills in Front-end development. In my free time I prefer to learn english, read news from web development, and also love to watch old films and make music"
+        "I got interested with web development in about one and half year ago, before that I programming in languages like C++ and Java. During that one and a half year I graduated from university, and got small experience in independent project as HTML coder, also I improved my skills in Front-end development. In my free time I prefer to learn english, read news from web development, and also love to watch old films and make music."
       ],
     }
   ],
@@ -72,6 +72,7 @@ export const about = {
 export const projects = {
   caption: "My projects",
   filterText: "Projects with ",
+  filterPlaceholder: "No filter",
   openLink: "Open",
   descriptionButton: "Project description",
   projectsList: getProjectsList('en')

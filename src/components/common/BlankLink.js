@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const BlankLink = ({ href, children, className }) =>
+const BlankLink = ({ 
+  href, children, className 
+}) =>
   <a
     href={href}
     rel="noopener noreferrer"

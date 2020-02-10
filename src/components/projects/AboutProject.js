@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import BlankLink from '../common/BlankLink';
 import Icon from '../common/Icon';
 import Modal from '../common/Modal';
@@ -35,7 +36,7 @@ const AboutProject = ({
         href={github}
         className='projects-item__icon'
       >
-        <Icon name='github' hover/>
+        <Icon name='github' hover />
       </BlankLink>
       <Modal
         isOpen={isModalOpen}
@@ -45,6 +46,20 @@ const AboutProject = ({
       </Modal>
     </div>
   )
+}
+
+AboutProject.propTypes = {
+  descriptionBtn: PropTypes.string,
+  github: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string
+}
+
+AboutProject.defaultProps = {
+  descriptionBtn: "Description",
+  github: "#",
+  title: "Unknown",
+  description: ""
 }
 
 export default AboutProject;

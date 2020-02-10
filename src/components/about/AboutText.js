@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './AboutText.scss';
 
-const AboutText = ({ 
-  caption = '', 
-  text = '', 
+const AboutText = ({
+  caption = '',
+  text = [],
 }) => {
 
   return (
@@ -12,7 +13,7 @@ const AboutText = ({
         {caption}
       </h3>
       {
-        text.map((textContent, i)=>
+        text.map((textContent, i) =>
           <p key={i} className='about-text__content'>
             {textContent}
           </p>
@@ -20,6 +21,11 @@ const AboutText = ({
       }
     </article>
   )
+}
+
+AboutText.propTypes = {
+  caption: PropTypes.string,
+  text: PropTypes.arrayOf(PropTypes.string),
 }
 
 export default AboutText;

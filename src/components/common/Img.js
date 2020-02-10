@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import './Img.scss';
 
-const Img = ({ imgSource, additionalClasses, children }) => {
+const Img = ({ 
+  imgSource, 
+  additionalClasses, 
+  children 
+}) => {
+
   let [isLoaded, setLoad] = useState(false);
 
   useEffect(() => {
@@ -27,6 +33,17 @@ const Img = ({ imgSource, additionalClasses, children }) => {
       {children}
     </div>
   )
+}
+
+Img.propTypes = {
+  imgSource: PropTypes.string, 
+  additionalClasses: PropTypes.string, 
+  children: PropTypes.node 
+}
+
+Img.defaultProps = {
+  imgSource: "", 
+  additionalClasses: "", 
 }
 
 export default Img;

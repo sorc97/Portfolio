@@ -11,8 +11,6 @@
   flex-direction: column;
   @include alignElements(center);
   width: 25%;
-  // min-width: 280px;
-  // border-right: 2px solid $secondary-light-color;
   background-color: $secondary-color;
   
   @include desktop {
@@ -25,7 +23,7 @@
 
   &_active {
     display: flex;
-    animation: slideFromLeft $main-transition;
+    animation: menuSlide $main-transition;
     box-shadow: 0px 0px 10px #000;
     z-index: 10;
 
@@ -37,7 +35,6 @@
       right: 0;
       bottom: 0;
       background-color: rgba($color: #000, $alpha: 0.5);
-      // background-color: rgba(0, 0, 0, 0.5);
       animation: fadeIn $main-transition;
     }
   }
@@ -46,21 +43,12 @@
 .menu {
   width: 100%;
 
-  &__text-wrapper {
-    // width: 50%;
-    // display: flex;
-  }
-
   &__icon {
     margin-right: 15px;
 
     @include desktop {
       margin: 0;
     }
-  }
-
-  &__list {
-    // width: 100%;
   }
 
   &__item {

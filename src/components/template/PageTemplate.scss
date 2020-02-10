@@ -8,8 +8,6 @@
   display: flex;
   width: 75%;
   min-height: 100vh;
-  // height: fit-content;
-  // padding: 0px 20px;
   z-index: 1;
 
   @include desktop {
@@ -18,26 +16,38 @@
   }
 
   @include tablet {
-    // position: static;
-    // @include size(100%);
-    // z-index: -1;
     left: 0px;
 
     &_menu-opened {
       transform: translateX(150px);
-      // margin-left: 150px;
     }
+  }
+}
+
+.menu-toggler_positioned {
+  position: absolute;
+  left: 25px;
+  top: 25px;
+
+  @include phone {
+    left: 15px;
+    top: 20px;
   }
 }
 
 .lang-choosing {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 20px;
+  right: 25px;
   display: flex;
   align-items: center;
   font-family: $text-font;
 
+  @include phone {
+    top: 15px;
+    right: 15px;
+  }
+  
   &__item {
     color: $primory-light-color;
     font-size: 20px;
@@ -48,18 +58,4 @@
       color: $secondary-light-color;
     }
   }
-
-  &__toggler {
-    margin: 0px 10px;
-  }
-}
-
-
-.loading {
-  display: flex;
-  @include size(100%, 100vh);
-  @include alignElements(center);
-  @include font($caption-font, 3rem);
-  text-align: center;
-  color: $secondary-light-color;
 }
