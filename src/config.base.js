@@ -24,7 +24,7 @@ export const communicationContacts = [
 export const getProjectsList = (lang) => [
   {
     title: "Lawyer",
-    link: "https://sorc97.github.io/Lawyer",
+    link: "http://nnd1997.ru/Lawyer",
     img: require("./img/Lawyer.jpg"),
     tags: ["html", "css", "js", "responsive"],
     github: "https://github.com/sorc97/Lawyer",
@@ -35,7 +35,7 @@ export const getProjectsList = (lang) => [
   },
   {
     title: "CozyHouse",
-    link: "https://sorc97.github.io/Pets",
+    link: "http://nnd1997.ru/ShelterLayout",
     img: require("./img/Pets.jpg"),
     tags: ["html", "css", "bootstrap", "js", "BEM", "mobile first", "responsive"],
     github: "https://github.com/sorc97/ShelterLayout",
@@ -46,7 +46,7 @@ export const getProjectsList = (lang) => [
   },
   {
     title: "Zero",
-    link: "https://sorc97.github.io/ZeroLayout",
+    link: "http://nnd1997.ru/ZeroLayout",
     img: require("./img/Zero.jpg"),
     tags: ["html", "scss", "css grid", "js", "webpack", "BEM", "responsive"],
     github: "https://github.com/sorc97/ZeroLayout",
@@ -57,7 +57,7 @@ export const getProjectsList = (lang) => [
   },
   {
     title: "ImageGenerator",
-    link: "https://sorc97.github.io/ImageGenerator",
+    link: "http://nnd1997.ru/ImageGenerator",
     img: require("./img/ImageGenerator.jpg"),
     tags: ["html", "css", "js", "api", "lazy load", "responsive"],
     github: "https://github.com/sorc97/ImageGenerator",
@@ -68,7 +68,7 @@ export const getProjectsList = (lang) => [
   },
   {
     title: "Dictionary",
-    link: "https://sorc97.github.io/Dictionary",
+    link: "http://nnd1997.ru/Dictionary",
     img: require("./img/Dictionary.jpg"),
     tags: ["react", "redux", "css", "responsive"],
     github: "https://github.com/sorc97/Dictionary",
@@ -79,7 +79,7 @@ export const getProjectsList = (lang) => [
   },
   {
     title: "TrelloClone",
-    link: "https://sorc97.github.io/trelloClone",
+    link: "http://nnd1997.ru/trelloClone",
     img: require("./img/TrelloClone.jpg"),
     tags: ["react", "react hooks", "typescript", "scss", "webpack", "d'n'd"],
     github: "https://github.com/sorc97/trelloClone",
@@ -90,7 +90,7 @@ export const getProjectsList = (lang) => [
   },
   {
     title: "MusicShop",
-    link: "http://nnd1997.ru:50",
+    link: "http://nnd1997.ru/MusicShop",
     img: require("./img/MusicShop.jpg"),
     tags: [
       "react", "redux", "nodeJs", "api", "mongoDB", "webpack", "css", "css grid", "responsive"
