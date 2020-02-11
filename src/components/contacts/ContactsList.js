@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Icon from '../common/Icon';
-import BlankLink from '../common/BlankLink';
+import ContactsItem from './ContactsItem';
 import './ContactsList.scss';
 
 const ContactsList = ({ contacts = [] }) =>
@@ -12,13 +11,8 @@ const ContactsList = ({ contacts = [] }) =>
       </h2>
       <ul className='contacts-info__icons-list icons-list'>
         {
-          icons.map(({ name, description, link }, i) =>
-            <BlankLink className='icons-list__link' key={i} href={link}>
-              <Icon name={name} className='icons-list__icon' />
-              <span>
-                {description}
-              </span>
-            </BlankLink>
+          icons.map((contact, i) =>
+            <ContactsItem {...contact} key={i} />
           )
         }
       </ul>

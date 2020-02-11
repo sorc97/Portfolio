@@ -7,7 +7,18 @@ export const sidebarIcons = {
 }
 
 export const skillsList = [
-  "HTML5", "CSS3", "SCSS", "Bootstrap", "JavaScript", "JQuery", "React", "Redux", "Typescript", "Webpack", "NodeJS", "MongoDB", "GIT", "BEM", "English (B1)"
+  "HTML5", "CSS3", "SCSS", "Bootstrap", "JavaScript", "JQuery", "React", "Redux", "Typescript", "Webpack", "NodeJS", "Express", "MongoDB", "GIT", "BEM", "English (B1)"
+]
+
+export const profiles = [
+  { name: "github", description: "Github", link: "https://github.com/sorc97" },
+  { name: "vk", description: "Vkontakte", link: "https://vk.com/nikita_nnd" }
+]
+
+export const communicationContacts = [
+  { name: "telegram", description: "Telegram", link: "https://t.me/sorc97" },
+  { name: "envelope", description: "nnd9797@gmail.com", link: "mailto:nnd9797@gmail.com" },
+  { name: "phone", description: "+7 (968) 692-07-88" }
 ]
 
 export const getProjectsList = (lang) => [
@@ -41,8 +52,8 @@ export const getProjectsList = (lang) => [
     github: "https://github.com/sorc97/ZeroLayout",
     category: (lang === "ru") ? "Верстка" : "Layouts",
     description: (lang === "ru") ?
-      "Данный проект представляет из себя многостраничный сайт, созданный при помщи HTML, SCSS, JavaScript и Webpack. В ходе разрабоки применялась методолгия БЭМ, элементы позиционировались при помощи CSS Grid. Для сборки проекта использовался бандлер Webpack, его конфигурационный файл был разделен на три файла для разграничения режима разработки (development) и готового проекта (production), также были подключены необходимые лоадеры и пресеты для работы с SASS файлами, картинками и шрифтами. Адаптивная версия сайта выполнена с помощью CSS media queries и CSS Grid."
-      : "This project is multi-page website created with HTML, SCSS, JS and Webpack. Project was developed by BEM methodology and elements was aligned by using CSS Grid. For project's build Webpack bundler was used, configuration file separated into three different files for logical separation of development and production mode, also required loaders for SASS, images and fonts files was established. Responsive version of the site was created with CSS media queries and CSS grid."
+      "Данный проект представляет из себя многостраничный сайт, созданный при помщи HTML, SCSS, JavaScript и Webpack. В ходе разрабоки применялась методолгия БЭМ, элементы позиционировались при помощи CSS Grid. Для сборки проекта использовался бандлер Webpack, для разграничения режима разработки (development) и готового проекта (production) использовались переменные окружения, также были подключены необходимые лоадеры и пресеты для работы с SASS файлами, картинками и шрифтами. Адаптивная версия сайта выполнена с помощью CSS media queries и CSS Grid."
+      : "This project is multi-page website created with HTML, SCSS, JS and Webpack. Project was developed by BEM methodology and elements was aligned by using CSS Grid. Project was build with Webpack, for splitting production and development mode environment variables was used, also required loaders for SASS, images and fonts files was established. Responsive version of the site was created with CSS media queries and CSS grid."
   },
   {
     title: "ImageGenerator",
@@ -59,7 +70,7 @@ export const getProjectsList = (lang) => [
     title: "Dictionary",
     link: "https://sorc97.github.io/Dictionary",
     img: require("./img/Dictionary.jpg"),
-    tags: ["react", "redux", "css",  "responsive"],
+    tags: ["react", "redux", "css", "responsive"],
     github: "https://github.com/sorc97/Dictionary",
     category: (lang === "ru") ? "Приложения" : "Applications",
     description: (lang === "ru") ?
@@ -70,7 +81,7 @@ export const getProjectsList = (lang) => [
     title: "TrelloClone",
     link: "https://sorc97.github.io/trelloClone",
     img: require("./img/TrelloClone.jpg"),
-    tags: ["react", "react hooks", "typescript", "scss", "webpack", "d'n'd" ],
+    tags: ["react", "react hooks", "typescript", "scss", "webpack", "d'n'd"],
     github: "https://github.com/sorc97/trelloClone",
     category: (lang === "ru") ? "Приложения" : "Applications",
     description: (lang === "ru") ?

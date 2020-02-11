@@ -93,3 +93,12 @@ body {
     padding-bottom: 20px;
   }
 }
+
+::-webkit-scrollbar {
+  width: 15px;
+  background-color: #3b4149;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #696e78;
+}

@@ -42,21 +42,24 @@
 }
 
 .icons-list {
-  &__link {
+  &__item {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  &__link, &__item {
     display: flex;
     align-items: center;
     @include font($text-font, 1.5rem);
     color: $primory-light-color;
-    margin-bottom: 15px;
     transition: $main-transition;
 
     @include phone {
       flex-direction: column;
       justify-content: center;
-    }
-
-    &:last-child {
-      margin-bottom: 0;
     }
     
     &:hover {

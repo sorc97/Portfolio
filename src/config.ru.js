@@ -2,7 +2,9 @@ import {
   aboutAvatar,
   sidebarIcons,
   skillsList,
-  getProjectsList
+  getProjectsList,
+  profiles,
+  communicationContacts
 } from "./config.base";
 
 export const sidebar = {
@@ -83,17 +85,11 @@ export const contacts = {
   contactsList: [
     {
       title: "Мои профили",
-      icons: [
-        {name: "github", description: "Github", link: "https://github.com/sorc97"},
-        {name: "vk", description: "Vkontakte", link: "https://vk.com/nikita_nnd"}
-      ]
+      icons: profiles
     },
     {
       title: "Контакты для связи",
-      icons: [
-        {name: "telegram", description: "Telegram", link: "https://t.me/sorc97"},
-        {name: "envelope", description: "nnd9797@gmail.com", link: "mailto:nnd9797@gmail.com"}
-      ]
+      icons: communicationContacts
     },
   ]
 }
