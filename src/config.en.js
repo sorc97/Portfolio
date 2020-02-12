@@ -60,7 +60,7 @@ export const about = {
     {
       caption: "Briefly about me",
       text: [
-        "I got interested with web development in about one and half year ago, before that I programming in languages like C++ and Java. During that one and a half year I graduated from university, and got small experience in independent project as HTML coder, also I improved my skills in Front-end development. In my free time I prefer to learn english, read news from web development, and also love to watch old films and make music."
+        "I got interested with web development in about one and half year ago, before that I programming in languages like C++ and Java. During that one and a half year I graduated from university, and got small experience in independent project as HTML coder, also I improved my skills in Front-end development. In my free time I prefer to learn english, read web development news, and also love to watch old films and make music."
       ],
     }
   ],
